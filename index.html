@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoHub Deluxe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="WhatsApp Video 2024-10-03 at 07.34.49.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+
+    <header>
+        <div class="logo">
+            <img src="" alt="MercadoHub Deluxe">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forro.html">Foro</a></li>
+                <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="normas.html">Normas de Comunidad</a></li>
+                <li><button id="addItemButton" onclick="toggleForm()">Agregar Item</button></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <button>🔍</button>
+        </div>
+        <div class="profile">
+            <a href="perfil.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/1200px-WoW_icon.svg.png" alt="Perfil" class="small-profile" />
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <button onclick="filterGames('')">Videojuegos</button>
+            <button onclick="filterGames('Dota 2')">Dota 2</button>
+            <button onclick="filterGames('Albion Online')">Albion Online</button>
+            <button onclick="filterGames('Counter-Strike 2')">Counter-Strike 2</button>
+            <button onclick="filterGames('Rust')">Rust</button>
+            <button onclick="filterGames('Warframe')">Warframe</button>
+        </aside>
+
+        <section class="content">
+            <h2>Últimas Publicaciones</h2>
+            <div class="posts" id="gamePosts"></div>
+
+            <h2>Publicaciones más votadas</h2>
+            <div class="posts" id="topPosts"></div>
+
+            <div id="addItemForm" style="display: none;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/1200px-WoW_icon.svg.png" alt="Logotipo" class="logo-top-right">
+                <h3>Agregar Item</h3>
+                <input type="file" id="itemImage" accept="image/*" required>
+                <input type="text" id="itemName" placeholder="Nombre del Item" required>
+                <select id="itemGame" required>
+                    <option value="" disabled selected>Selecciona un Juego</option>
+                    <option value="Dota 2">Dota 2</option>
+                    <option value="Albion Online">Albion Online</option>
+                    <option value="Counter-Strike 2">Counter-Strike 2</option>
+                    <option value="Rust">Rust</option>
+                    <option value="Warframe">Warframe</option>
+                </select>
+                <button class="dark-button" onclick="addItem()">Agregar</button>
+                <button class="dark-button" onclick="toggleForm()">Cancelar</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleForm() {
+            const form = document.getElementById('addItemForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addItem() {
+            const itemImage = document.getElementById('itemImage').files[0];
+            const itemName = document.getElementById('itemName').value;
+            const itemGame = document.getElementById('itemGame').value;
+
+            if (itemImage && itemName && itemGame) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const postsContainer = document.getElementById('gamePosts');
+                    const newPost = document.createElement('div');
+                    newPost.className = 'post';
+                    newPost.setAttribute('data-title', itemGame);
+                    newPost.innerHTML = `
+                        <div class="content-box">
+                            <h3>${itemName}</h3>
+                            <p>ID: <span style="color: #0ff;">54321</span></p>
+                            <img src="${event.target.result}" alt="${itemName}" class="post-image">
+                        </div>
+                    `;
+                    postsContainer.appendChild(newPost);
+                    toggleForm();
+                };
+                reader.readAsDataURL(itemImage);
+            } else {
+                alert('Por favor completa todos los campos.');
+            }
+        }
+
+        function filterGames(title) {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach(post => {
+                if (title === '' || post.getAttribute('data-title').toLowerCase() === title.toLowerCase()) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

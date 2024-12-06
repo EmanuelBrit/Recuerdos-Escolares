@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normas de la Comunidad - MercadoHub Deluxe</title>
+    <link rel="stylesheet" href="normas.css">
+    <script>
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest("nav") && !event.target.closest(".content-box")) {
+                window.location.href = "index.html"; // Redirigir a Home
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Proyecto_nuevo__1_-removebg-preview (2).png" alt="MercadoHub Deluxe Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forro.html">Foro</a></li>
+                <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="normas.html">Normas de Comunidad</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <button>🔍</button>
+        </div>
+        <div class="profile" onclick="goToProfile(event)">
+            <a href="perfil.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/1200px-WoW_icon.svg.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Normas de la Comunidad</h1>
+            <hr>
+        </div>
+
+        <!-- Contenedores de normas -->
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Prohibición de ítems ilegales</h2>
+                    <p>No se permite intercambiar objetos ilegales, peligrosos o que infrinjan leyes, como armas, productos falsificados o robados.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Apoyo comunitario</h2>
+                    <p>Se fomenta la ayuda altruista dentro y fuera de la plataforma.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Transacciones justas</h2>
+                    <p>Las transacciones deben ser justas y transparentes, con acuerdo previo entre ambas partes. Fraudes resultarán en sanciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Cumplimiento de compromisos</h2>
+                    <p>Es obligatorio cumplir con los acuerdos de intercambio, de lo contrario, habrá sanciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Prohibición de actividades comerciales</h2>
+                    <p>No se permite vender ítems con fines de lucro.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="outer-box">
+                <div class="inner-box">
+                    <h2>Veracidad en la información</h2>
+                    <p>La información sobre los ítems debe ser precisa y veraz, sin engaños ni omisiones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToProfile(event) {
+            event.stopPropagation(); // Detener la propagación del evento
+            window.location.href = "perfil.html"; // Redirigir al perfil
+        }
+    </script>
+</body>
+
+</html>

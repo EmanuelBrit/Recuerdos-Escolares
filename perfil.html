@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="perfil.css">
+    <script>
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest("nav") && !event.target.closest(".profile-card")) {
+                window.location.href = "index.html"; // Redirigir a Home
+            }
+        });
+
+        function goToProfile(event) {
+            event.stopPropagation(); // Detener la propagación del evento
+        }
+    </script>
+</head>
+
+<body>
+    <video id="backgroundVideo" autoplay loop muted>
+        <source src="tu_video_de_fondo.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+
+    <header>
+        <div class="logo">
+            <img src="Proyecto_nuevo__1_-removebg-preview (2).png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forro.html">Foro</a></li>
+                <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="normas.html">Normas de la Comunidad</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <button>🔍</button>
+        </div>
+        <div class="profile">
+            <a href="perfil.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/1200px-WoW_icon.svg.png" alt="Perfil" />
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-info">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/600px-WoW_icon.svg.png" alt="Avatar">
+                <div class="username">juan2334</div>
+                <div class="user-id">ID: 287667656</div>
+                <div class="reputation">
+                    Reputación:
+                    <div class="reputation-stars">★★★★☆</div>
+                </div>
+                <div class="description">
+                    Soy de Paysandú. Activo en el tradeo de ítems. Gamer enjoyer.
+                </div>
+            </div>
+
+            <div class="items">
+                <h3>Items</h3>
+                <div class="item">
+                    <img src="https://render.albiononline.com/v1/item/T8_MOUNT_MAMMOTH_TRANSPORT" alt="mamut">
+                    <span>mamut</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="friends-list">
+            <h3>Amigos</h3>
+            <p>Aún no tienes amigos</p>
+            <button>+ Añadir Amigo</button>
+            <button>Bloquear</button>
+            <button>Reportar</button>
+        </div>
+    </div>
+</body>
+
+</html>

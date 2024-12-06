@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    background: url('Estrellas GIF - Estrellas Cielo Noche - Discover & Share GIFs.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    /* Aumentar aún más el padding */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #0ff;
+    /* Aumentar el grosor del borde */
+    z-index: 1;
+}
+
+.logo img {
+    height: 100px;
+    /* Aumentar altura del logo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: 40px;
+    /* Aumentar margen izquierdo */
+}
+
+nav ul li {
+    margin-right: 30px;
+    /* Aumentar espacio entre enlaces */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    /* Aumentar tamaño de fuente */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    /* Aumentar padding */
+    border: 1px solid #0ff;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    width: 250px;
+    /* Aumentar ancho */
+}
+
+.search button {
+    padding: 10px;
+    /* Aumentar padding */
+    background-color: #0ff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.profile {
+    margin-left: 30px;
+}
+
+.profile img {
+    width: 60px;
+    /* Aumentar tamaño de imagen */
+    height: 60px;
+    /* Aumentar tamaño de imagen */
+    border-radius: 50%;
+    border: 2px solid #0ff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 30px;
+    /* Ajustar padding */
+    gap: 30px;
+    /* Aumentar el espacio entre contenedores */
+}
+
+.profile-card,
+.friends-list {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    padding: 40px;
+    /* Aumentar padding */
+    width: 100%;
+    max-width: 750px;
+    /* Aumentar ancho máximo */
+    margin: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+    /* Aumentar sombra */
+    text-align: center;
+}
+
+.profile-card img {
+    width: 150px;
+    /* Aumentar tamaño del avatar */
+    height: 150px;
+    /* Aumentar tamaño del avatar */
+    border-radius: 50%;
+    border: 2px solid #00FFFF;
+}
+
+.items h3 {
+    font-size: 2.5em;
+    /* Aumentar tamaño del encabezado */
+}
+
+.items .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items .item img {
+    width: 120px;
+    /* Aumentar tamaño de los items */
+    height: auto;
+}

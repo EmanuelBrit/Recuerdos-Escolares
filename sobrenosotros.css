@@ -1,0 +1,138 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    background: url('Estrellas GIF - Estrellas Cielo Noche - Discover & Share GIFs.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Encabezado */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* Mantenido del primer código */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Igual que antes */
+    border-bottom: 1px solid #0ff;
+    /* Igual que antes */
+    z-index: 1;
+    /* Mantenido */
+}
+
+.logo img {
+    height: 80px;
+    /* Mantenido del primer código */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+    /* Mantenido */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    /* Cambiado a 24px del primer código */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+    /* Igual que antes */
+}
+
+.search input {
+    padding: 10px;
+    /* Igual que antes */
+    border: 1px solid #0ff;
+    /* Igual que antes */
+    background-color: transparent;
+    /* Igual que antes */
+    color: #fff;
+    /* Igual que antes */
+    outline: none;
+    /* Igual que antes */
+}
+
+.search button {
+    padding: 10px;
+    /* Igual que antes */
+    background-color: #0ff;
+    /* Igual que antes */
+    border: none;
+    /* Igual que antes */
+    cursor: pointer;
+    /* Igual que antes */
+}
+
+
+/* Sección Sobre Nosotros */
+
+.about {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.about h2 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.left-content,
+.right-content {
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container {
+    margin-bottom: 20px;
+}
+
+.container-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* Imagen de perfil */
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
